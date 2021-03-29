@@ -1,7 +1,7 @@
 {
-  "name": "git-sync",
+  "name": "gitSync",
   "version": "1.0.0",
-  "description": "git-sync",
+  "description": "gitSync",
   "main": "app.js",
   "author": {
     "name": "Brandon10x15"

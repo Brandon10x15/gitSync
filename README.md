@@ -1,4 +1,4 @@
-# git-sync
+# gitSync
 Node.js package built off of simple-git. Periodically auto-pull remote changes, then push local changes to gitHub.
 
 1. Install 'git' on your device, https://git-scm.com/downloads

@@ -10,7 +10,7 @@ module.exports = {
 				if (err) { git.branch(gitBranch); }
 				if (update) {
 					if (update.summary.changes) {
-						console.log('git-sync: Restarting due to changes...');
+						console.log('gitSync: Restarting due to changes...');
 						spawnSync(`powershell.exe`, [`${runningProcess} restart ${localMainFilename}`], { windowsHide: true });
 					}
 				}
@@ -18,6 +18,6 @@ module.exports = {
 		} catch (err) { await git.branch(gitBranch); }
 		await git.add('./*');
 		await git.commit("git-sync: Auto-commit.");
-		await git.push(['-f', remoteName, `HEAD:${gitBranch}`], () => console.log(`git-sync: Pushed local file changes to ${gitLink}, branch '${gitBranch}'.`));
+		await git.push(['-f', remoteName, `HEAD:${gitBranch}`], () => console.log(`gitSync: Pushed local file changes to ${gitLink}, branch '${gitBranch}'.`));
 	},
 }
